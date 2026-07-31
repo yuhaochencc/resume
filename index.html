@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuhao Chen | Resume</title>
+    <!-- 引入 Tailwind CSS 以实现 Apple 般的高级极简排版 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fcfcfc;
+            color: #1d1d1f;
+        }
+        .section-title {
+            color: #0b1c3c; /* JPMorgan 风格深蓝色 */
+            border-bottom: 1px solid #e5e5e7;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .zh { display: none; } /* 默认隐藏中文 */
+    </style>
+</head>
+<body class="antialiased leading-relaxed pb-20">
+
+    <!-- 顶部导航与语言切换 -->
+    <div class="fixed top-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-100 z-50">
+        <div class="max-w-4xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="font-semibold text-lg tracking-wider">YC.</div>
+            <button onclick="toggleLang()" id="langBtn" class="text-sm font-medium bg-[#0b1c3c] text-white px-4 py-2 rounded-full hover:bg-gray-800 transition">
+                中文 / EN
+            </button>
+        </div>
+    </div>
+
+    <main class="max-w-4xl mx-auto px-6 pt-32">
+        <!-- 头部信息区 -->
+        <header class="mb-16 flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div>
+                <h1 class="text-5xl font-bold tracking-tight mb-4 en">YUHAO CHEN</h1>
+                <h1 class="text-5xl font-bold tracking-tight mb-4 zh">陈宇浩</h1>
+                
+                <div class="text-gray-500 space-y-1 en">
+                    <p>London, U.K. | Tel: +44 7350126921</p>
+                    <p>Email: yuhaochen.cc@gmail.com</p>
+                </div>
+                <div class="text-gray-500 space-y-1 zh">
+                    <p>电话: 13817701142 | 邮箱: yuhaochen.cc@gmail.com</p>
+                    <p>住址: 上海市浦东新区 | 政治面貌: 群众 | 民族: 汉族</p>
+                </div>
+            </div>
+            <!-- 头像占位符，请将 src 替换为您的商务证件照链接或本地路径 -->
+            <div class="mt-8 md:mt-0">
+                <img src="https://via.placeholder.com/150" alt="Profile Photo" class="w-32 h-40 object-cover rounded shadow-lg border border-gray-200">
+            </div>
+        </header>
+
+        <!-- 教育背景 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold section-title en">EDUCATION</h2>
+            <h2 class="text-2xl font-semibold section-title zh">教育背景</h2>
+            
+            <div class="mb-6 flex justify-between flex-col md:flex-row">
+                <div class="en">
+                    <h3 class="text-lg font-bold">King's College London (KCL)</h3>
+                    <p class="text-gray-700 italic">Master of Laws (LL.M.) - Specialization: International Dispute Resolution</p>
+                </div>
+                <div class="zh">
+                    <h3 class="text-lg font-bold">英国伦敦国王学院</h3>
+                    <p class="text-gray-700 italic">法学硕士 (国际争议解决)</p>
+                </div>
+                <div class="text-gray-500 text-sm mt-1 md:mt-0 en">Sep 2025 – Sep 2026</div>
+                <div class="text-gray-500 text-sm mt-1 md:mt-0 zh">2025.09 – 2026.09</div>
+            </div>
+
+            <div class="flex justify-between flex-col md:flex-row">
+                <div class="en">
+                    <h3 class="text-lg font-bold">East China University of Political Science and Law (ECUPL)</h3>
+                    <p class="text-gray-700 italic">Bachelor of Laws (LL.B.) - Specialization: Economic Law</p>
+                    <p class="text-gray-600 mt-1">GPA: 3.76/4.0 (90.5/100)</p>
+                </div>
+                <div class="zh">
+                    <h3 class="text-lg font-bold">华东政法大学</h3>
+                    <p class="text-gray-700 italic">法学专业（经济法）</p>
+                    <p class="text-gray-600 mt-1">GPA: 3.75 (90.5) | 已通过国家职业法律资格考试</p>
+                </div>
+                <div class="text-gray-500 text-sm mt-1 md:mt-0 en">Sep 2022 - Jul 2026</div>
+                <div class="text-gray-500 text-sm mt-1 md:mt-0 zh">2022.09 – 2026.07</div>
+            </div>
+        </section>
+
+        <!-- 实习经历 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold section-title en">LEGAL EXPERIENCE</h2>
+            <h2 class="text-2xl font-semibold section-title zh">实习经历</h2>
+
+            <!-- TikTok -->
+            <div class="mb-8">
+                <div class="flex justify-between flex-col md:flex-row mb-2">
+                    <div class="en">
+                        <h3 class="text-lg font-bold">TikTok Information Technologies UK Ltd. | London</h3>
+                        <p class="text-gray-700 italic">Policy Governance Intern</p>
+                    </div>
+                    <div class="zh">
+                        <h3 class="text-lg font-bold">英国TikTok信息技术有限公司 | 伦敦</h3>
+                        <p class="text-gray-700 italic">政策合规治理团队</p>
+                    </div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 en">Jun 2026-</div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 zh">2026.06——</div>
+                </div>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm en">
+                    <li>Drafted and updated TikTok Shop governance policies by translating EU GPSR requirements into platform rules across 8 key European markets.</li>
+                    <li>Conducted legal and policy analysis to identify compliance risks and refine product governance policies.</li>
+                    <li>Supported the development of internal LLM governance tools through model training, distillation and calibration, enhancing automated compliance risk identification.</li>
+                </ul>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm zh">
+                    <li>独立对接荷兰、德国等地团队，跨部门沟通并全程参与欧盟核心八国市场的平台合规政策的系统性构建。</li>
+                    <li>负责掌控TikTok Shop (UK)合规政策的具体实施，根据实时政策及类案，准确识别法律风险并更新平台规则。</li>
+                    <li>主导TikTok内部大语言模型的建设、培养蒸馏与校准，推动风险识别流程及处置自动化。</li>
+                </ul>
+            </div>
+
+            <!-- Freshfields -->
+            <div class="mb-8">
+                <div class="flex justify-between flex-col md:flex-row mb-2">
+                    <div class="en">
+                        <h3 class="text-lg font-bold">Freshfields Bruckhaus Deringer | Shanghai</h3>
+                        <p class="text-gray-700 italic">Capital Markets Intern</p>
+                    </div>
+                    <div class="zh">
+                        <h3 class="text-lg font-bold">英国富而德律师事务所上海代表处</h3>
+                        <p class="text-gray-700 italic">资本市场团队</p>
+                    </div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 en">Mar 2025 - Jul 2025</div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 zh">2025.03——2025.07</div>
+                </div>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm en">
+                    <li>Independently coordinated with top-tier underwriters (CICC, UBS) and clients throughout the full-cycle due diligence and verification for high-profile HKEx IPOs, including Hesai Tech., AUX and MiniMax.</li>
+                    <li>Drafted and reviewed key sections of prospectuses for major clients like Flyme and CATL, demonstrating a deep understanding of prospectus structure and purpose for both Hong Kong and U.S. markets.</li>
+                    <li>Managed and drafted 30+ regulatory filings (e.g., M106, FF004) and handled project Guidecheck and Bible production with zero-error precision under tight deadlines.</li>
+                </ul>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm zh">
+                    <li>独立完成禾赛科技、大族数控、蜜雪冰城、MiniMax等企业港股IPO的三方尽调、材料验证全过程。</li>
+                    <li>负责参与Flyme、视源电子、奥克斯电器等行业知名头部企业招股书的业务、财务部分撰写。</li>
+                    <li>先后负责20+项目的香港章节或美国章节，对招股书各部分结构、逻辑及目的均有深刻了解；独立完成近30+不同项目的M106、FF004等联交所文件。</li>
+                </ul>
+            </div>
+
+            <!-- JIN MAO -->
+            <div class="mb-8">
+                <div class="flex justify-between flex-col md:flex-row mb-2">
+                    <div class="en">
+                        <h3 class="text-lg font-bold">Shanghai JIN MAO Partners | Shanghai</h3>
+                        <p class="text-gray-700 italic">M&A and Investment Intern</p>
+                    </div>
+                    <div class="zh">
+                        <h3 class="text-lg font-bold">上海市金茂律师事务所</h3>
+                        <p class="text-gray-700 italic">投融资并购团队</p>
+                    </div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 en">Jan 2025 - Mar 2025</div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 zh">2025.01——2025.03</div>
+                </div>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm en">
+                    <li>Identified and mitigated critical legal risks for state-owned enterprise land acquisitions and cross-border M&A by delivering 4+ meticulous due diligence reports.</li>
+                    <li>Drafted and refined a wide range of investment agreements and subsidiary setup documents.</li>
+                    <li>Facilitated high-stakes client negotiations by providing real-time legal risk alerts.</li>
+                </ul>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm zh">
+                    <li>独立完成4份尽调报告及相关网核内容，防范尽调失职风险并有效推进项目进展。</li>
+                    <li>全过程参与多项国企土地收购、新设子公司及并购项目，承担合作协议起草与审核、合规尽调及法律风险提示工作。</li>
+                    <li>深度推进上海东方枢纽工程进程中的系列法律问题。</li>
+                </ul>
+            </div>
+            
+            <!-- Hiways -->
+            <div class="mb-8">
+                <div class="flex justify-between flex-col md:flex-row mb-2">
+                    <div class="en">
+                        <h3 class="text-lg font-bold">Shanghai Hiways Law Firm | Shanghai</h3>
+                        <p class="text-gray-700 italic">Intellectual Property Intern</p>
+                    </div>
+                    <div class="zh">
+                        <h3 class="text-lg font-bold">上海市海华永泰律师事务所</h3>
+                        <p class="text-gray-700 italic">知识产权团队</p>
+                    </div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 en">Jun 2024 - Aug 2024</div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 zh">2024.06——2024.08</div>
+                </div>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm en">
+                    <li>Contributed to a landmark service trademark infringement case for Universal Pictures which was selected as one of the Top 10 Cases by the Supreme People's Court of China.</li>
+                    <li>Secured digital evidence using timestamp and blockchain technology.</li>
+                    <li>Authored 20+ litigation documents including case retrieval reports and defense opinions.</li>
+                </ul>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm zh">
+                    <li>参与环球影画公司对系列商标侵权诉讼全过程，其中一起服务商标案件入选最高人民法院十大案例。</li>
+                    <li>独立撰写超20份诉讼案件的律师函、质证意见、反驳意见等；负责商标查询，电子证据固定，时间戳制作等。</li>
+                </ul>
+            </div>
+
+            <!-- Court -->
+            <div>
+                <div class="flex justify-between flex-col md:flex-row mb-2">
+                    <div class="en">
+                        <h3 class="text-lg font-bold">Shanghai First Intermediate People's Court</h3>
+                        <p class="text-gray-700 italic">Criminal Tribunal Intern</p>
+                    </div>
+                    <div class="zh">
+                        <h3 class="text-lg font-bold">上海市第一中级人民法院</h3>
+                        <p class="text-gray-700 italic">刑事审判庭</p>
+                    </div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 en">Jun 2023 - Sep 2023</div>
+                    <div class="text-gray-500 text-sm mt-1 md:mt-0 zh">2023.06——2023.09</div>
+                </div>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm en">
+                    <li>Organized and analyzed over 100 case files, focusing on insider trading, market manipulation, and corruption.</li>
+                    <li>Prepared court briefs, summarized key arguments, and visualized key disputes.</li>
+                </ul>
+                <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm zh">
+                    <li>审查音视频证据、检索案例百余件，涉及内幕交易、操纵市场等，旁听开庭，归纳争议焦点并撰写审判要旨。</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 校园活动 -->
+        <section class="mb-16">
+            <h2 class="text-2xl font-semibold section-title en">CAMPUS & ACTIVITIES</h2>
+            <h2 class="text-2xl font-semibold section-title zh">校园经历</h2>
+            
+            <div class="mb-6">
+                <div class="en">
+                    <h3 class="text-lg font-bold">Legal Aid Center, ECUPL</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm mt-2">
+                        <li>Consulted on 20+ inheritance cases with a success rate over 92%.</li>
+                        <li>Organized the "Labor Disputes" campaign, involving face-to-face sessions with 30+ employers.</li>
+                    </ul>
+                </div>
+                <div class="zh">
+                    <h3 class="text-lg font-bold">华东政法大学大学生社会法律援助中心</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm mt-2">
+                        <li>深度参与普法活动，负责策划、授课、政府沟通等工作；负责“疫情下的劳资纠纷问题”普法活动。</li>
+                        <li>承办婚姻家事、财产继承案件咨询20余起，案件跟进成功率超90%。</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <div class="en">
+                    <h3 class="text-lg font-bold">"10th Xiao Cheng Cup" Public Interest Litigation Competition - Third Place Award</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm mt-2">
+                        <li>Led a team to litigate against Luckin Coffee for infringing on consumer rights, leading to policy changes at the company.</li>
+                    </ul>
+                </div>
+                <div class="zh">
+                    <h3 class="text-lg font-bold">“小城杯”公益诉讼之星大赛 - 三等奖</h3>
+                    <ul class="list-disc list-inside text-gray-600 space-y-1 ml-2 text-sm mt-2">
+                        <li>诉瑞幸咖啡强制“线上消费”侵害消费者权益，长宁区法院出具司法意见书要求瑞幸整改。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 技能与荣誉 -->
+        <section>
+            <h2 class="text-2xl font-semibold section-title en">SKILLS & HONORS</h2>
+            <h2 class="text-2xl font-semibold section-title zh">技能证书与荣誉称号</h2>
+            
+            <div class="en text-gray-700 text-sm space-y-2">
+                <p><strong>Legal Skills:</strong> Legal Research, Document Drafting, Visio (Flowcharts), Policy Analysis, Risk Assessment</p>
+                <p><strong>Languages:</strong> English (Fluent, IELTS 7.5), Mandarin (Native)</p>
+                <p><strong>Honors:</strong> Outstanding Student Leader, Social Activities Scholarship, Third-class Scholarship</p>
+            </div>
+            <div class="zh text-gray-700 text-sm space-y-2">
+                <p><strong>法律技能：</strong> 类案检索、证据固定、诉讼文书撰写</p>
+                <p><strong>语言能力：</strong> 英语（CET-6 555，雅思7.5）、法律英语</p>
+                <p><strong>其他荣誉：</strong> 优秀学生干部、三好学生、社会活动奖学金等</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        let isEnglish = true;
+        
+        function toggleLang() {
+            isEnglish = !isEnglish;
+            const enElements = document.querySelectorAll('.en');
+            const zhElements = document.querySelectorAll('.zh');
+            
+            if (isEnglish) {
+                enElements.forEach(el => el.style.display = 'block');
+                zhElements.forEach(el => el.style.display = 'none');
+            } else {
+                enElements.forEach(el => el.style.display = 'none');
+                zhElements.forEach(el => el.style.display = 'block');
+            }
+        }
+    </script>
+</body>
+</html>
