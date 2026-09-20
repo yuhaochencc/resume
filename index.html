@@ -40,9 +40,10 @@
                        textFadeOut 0.8s 1.6s ease-in-out forwards;
         }
         @keyframes textWrite {
-            0% { clip-path: polygon(0 0, 0 0, -10% 100%, 0 100%); opacity: 0; }
+            /* 将遮罩范围向上下左右各扩大 20%，完美包容花体字的边缘溢出部分 */
+            0% { clip-path: polygon(-20% -20%, -20% -20%, -30% 120%, -30% 120%); opacity: 0; }
             5% { opacity: 1; }
-            100% { clip-path: polygon(0 0, 110% 0, 110% 100%, 0 100%); opacity: 1; }
+            100% { clip-path: polygon(-20% -20%, 120% -20%, 120% 120%, -30% 120%); opacity: 1; }
         }
         @keyframes textFadeOut {
             0% { opacity: 1; filter: blur(0px); transform: scale(1); }
