@@ -8,7 +8,15 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        /* 新增的页脚专属优雅字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Noto+Serif+SC:wght@400;600&display=swap');
         
+        /* 仅用于页脚寄语的配置 */
+        .font-elegant { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: #1d1d1f;
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: #1d1d1f;
@@ -500,7 +508,72 @@
         </section>
 
     </main>
+<!-- 深蓝色页脚区域 -->
+    <footer class="bg-[#0b1c3c] pt-24 pb-12 mt-20 relative overflow-hidden">
+        <!-- 简单的背景光晕点缀 -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-white/5 rounded-full blur-[120px] pointer-events-none"></div>
 
+        <div class="max-w-5xl mx-auto px-6 relative z-10">
+            
+            <!-- 优雅寄语区域：使用香槟亚金色，避免俗气 -->
+            <div class="mb-20 text-center space-y-4 font-elegant text-[#C5A059] text-lg md:text-xl leading-loose">
+                <p class="en italic">
+                    "Thank you for visiting my personal website and taking the time to review my resume. I hope it provides a comprehensive overview of my background and catches your attention. Law is my lifelong passion and career pursuit, and I sincerely hope to earn your recognition. Wishing you all the best in your work and life!"
+                </p>
+                <p class="zh tracking-widest">
+                    “感谢您驻足访问我的个人主页并阅览这份简历。希望它能帮助您全面了解我的专业背景，也期盼能借此获得您的青睐。法律是我矢志终身从事的事业，非常渴望能得到您的认可与指教。祝您工作顺利，生活愉快！”
+                </p>
+            </div>
+
+            <!-- 底部导航与操作栏：左右分栏 -->
+            <div class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center gap-8">
+                
+                <!-- 左侧：社交链接 (LinkedIn | WeChat) -->
+                <div class="flex items-center space-x-6 text-sm font-sans text-white/70">
+                    <!-- 领英链接 -->
+                    <a href="www.linkedin.com/in/yuhao-chen-lawstudent" target="_blank" class="flex items-center gap-2 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        LinkedIn
+                    </a>
+                    
+                    <!-- 分隔符 -->
+                    <span class="text-white/20">|</span>
+                    
+                    <!-- 微信悬浮展示二维码 -->
+                    <div class="relative group cursor-pointer flex items-center gap-2 hover:text-white transition">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M8.406 16.594c-.218.062-.53.156-.718.156-.25 0-.532-.094-.657-.313-.093-.156-.093-.375-.093-.562v-2.094c-1.312-.906-2.124-2.312-2.124-3.875 0-2.906 2.718-5.312 6.092-5.312 3.374 0 6.092 2.406 6.092 5.312 0 .094 0 .156-.031.25-1.468-.312-2.937.281-3.843 1.468-1.593 2.125-1.562 5.281.469 7.375-1.062.969-2.624 1.562-4.218 1.562-1.25 0-2.437-.375-3.437-1.062l-2.093 1.062c-.218.094-.468.125-.687.031-.219-.094-.375-.281-.437-.531l-.312-1.844c0-.219.062-.438.187-.594 1.156-.937 1.843-2.312 1.843-3.781.03-.094.062-.219.062-.25zM17.156 9.875c2.25 0 4.092 1.594 4.092 3.562 0 1.062-.594 2-1.562 2.719l.219 1.25c.031.188 0 .375-.125.531-.125.125-.344.188-.531.125l-1.469-.75c-.719.469-1.594.75-2.469.75-2.25 0-4.093-1.594-4.093-3.562s1.843-3.562 4.093-3.562h1.844zm-7.656 1.875c.469 0 .844-.375.844-.844 0-.469-.375-.844-.844-.844-.469 0-.844.375-.844.844 0 .469.375.844.844.844zm3.906 0c.469 0 .844-.375.844-.844 0-.469-.375-.844-.844-.844-.469 0-.844.375-.844.844 0 .469.375.844.844.844zm4.187 4.125c.344 0 .625-.281.625-.625 0-.344-.281-.625-.625-.625-.344 0-.625.281-.625.625 0 .344.281.625.625.625zm-2.406 0c.344 0 .625-.281.625-.625 0-.344-.281-.625-.625-.625-.344 0-.625.281-.625.625 0 .344.281.625.625.625z"/></svg>
+                        WeChat
+                        <!-- 隐藏的二维码卡片，Hover 时浮现 -->
+                        <div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="bg-white p-2 rounded-xl shadow-2xl flex flex-col items-center">
+                                <!-- 请准备好你的微信二维码图片 wechat-qr.png -->
+                                <img src="wechat-qr.png" alt="WeChat QR Code" class="w-32 h-32 object-cover rounded-lg border border-gray-100">
+                                <span class="text-xs text-gray-500 mt-2 font-medium">Scan to Connect</span>
+                                <!-- 向下的白色小箭头 -->
+                                <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white transform rotate-45"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧：联系我按钮 (银白色，与网站背景呼应) -->
+                <a href="mailto:yuhaochen.cc@gmail.com?subject=Hello Yuhao, connecting from your personal website" class="inline-flex items-center justify-center px-8 py-3 text-sm font-bold text-[#0b1c3c] transition-all bg-[#f0f2f5] rounded-full shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:bg-white hover:-translate-y-1 hover:shadow-[0_0_25px_rgba(255,255,255,0.2)]">
+                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="en">Contact Me</span>
+                    <span class="zh tracking-widest">联系我</span>
+                </a>
+            </div>
+
+            <!-- 最底部：版权声明 -->
+            <div class="mt-12 text-center md:text-left text-xs text-white/30 font-sans border-t border-white/5 pt-6">
+                <span class="en">© 2026 Yuhao Chen. All rights reserved.</span>
+                <span class="zh">© 2026 陈宇浩 版权所有.</span>
+            </div>
+            
+        </div>
+    </footer>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         // 动画速度提升至400ms，更加干脆利落
