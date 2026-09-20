@@ -82,8 +82,8 @@
             transform: translateY(0);
         }
 
-        /* 中文默认隐藏 */
-        .zh { display: none; }
+        /* 中文默认隐藏，使用 !important 强制覆盖冲突样式 */
+.zh { display: none !important; }
         .text-jpm { color: #0b1c3c; }
         
         /* 锚点偏移量，防止导航栏遮挡任何标题或卡片内容 */
