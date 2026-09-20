@@ -86,8 +86,8 @@
         .zh { display: none; }
         .text-jpm { color: #0b1c3c; }
         
-        /* 锚点偏移量，防止导航栏遮挡标题 */
-        section { scroll-margin-top: 140px; }
+        /* 锚点偏移量，防止导航栏遮挡任何标题或卡片内容 */
+        *[id] { scroll-margin-top: 140px; }
     </style>
 </head>
 <body class="antialiased leading-relaxed pb-32">
@@ -99,40 +99,39 @@
     </div>
 
 <!-- 顶部横置导航栏 -->
-    <nav class="fixed top-4 left-0 right-0 z-50 px-6">
-        <div class="max-w-6xl mx-auto glass-panel rounded-full px-6 py-2 flex items-center justify-between">
+    <nav class="fixed top-4 left-0 right-0 z-50 px-4 md:px-6">
+        <div class="max-w-6xl mx-auto glass-panel rounded-full px-4 py-2 flex items-center justify-between">
             
-            <!-- 左侧区域：Logo + CV按钮 (占位并靠左) -->
-            <div class="flex items-center gap-4 shrink-0 lg:w-1/4 justify-start">
+            <!-- 左侧区域：自然缩放，不写死宽度 -->
+            <div class="flex items-center gap-3 shrink-0">
                 <!-- Logo -->
                 <div class="cursor-pointer shrink-0">
-                    <img src="logo.png" alt="YC Logo" class="h-10 w-auto object-contain">
+                    <img src="logo.png" alt="YC Logo" class="h-9 w-auto object-contain">
                 </div>
                 
-                <!-- 极简版 PDF 下载按钮 -->
-                <a href="Yuhao_Chen_Resume.pdf" target="_blank" class="inline-flex items-center justify-center px-4 py-1.5 text-xs font-bold text-gray-700 transition-all bg-white/50 border border-gray-300 rounded-full hover:bg-[#0b1c3c] hover:text-white hover:border-[#0b1c3c] shadow-sm hover:shadow-md shrink-0">
-                    <svg class="w-3.5 h-3.5 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- PDF 下载按钮 -->
+                <a href="Yuhao_Chen_Resume.pdf" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 text-xs font-bold text-gray-700 transition-all bg-white/50 border border-gray-300 rounded-full hover:bg-[#0b1c3c] hover:text-white hover:border-[#0b1c3c] shadow-sm hover:shadow-md shrink-0">
+                    <svg class="w-3.5 h-3.5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
                         <polyline points="7 10 12 15 17 10"></polyline>
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
                     <span class="en">CV</span>
-                    <!-- 增加了 tracking-widest 让中文字间距变大 -->
                     <span class="zh tracking-widest">简历</span>
                 </a>
             </div>
 
-            <!-- 中间区域：桌面端横向菜单 (强制居中，增加间距) -->
-<div class="hidden md:flex flex-1 justify-center overflow-visible">
-    <ul class="flex space-x-6 lg:space-x-10 text-sm font-semibold text-gray-700 whitespace-nowrap">
+            <!-- 中间区域：动态缩放，保护两端按钮 -->
+            <div class="hidden lg:flex flex-1 justify-center overflow-visible px-2">
+                <!-- 略微缩小了间距 (space-x-6)，确保强制不换行时不会把右边挤出去 -->
+                <ul class="flex space-x-6 text-[13px] xl:text-sm font-semibold text-gray-700 whitespace-nowrap">
                     
                     <!-- 1. 教育背景和个人信息 -->
                     <li class="nav-item relative py-2 cursor-pointer">
                         <a href="#education" class="hover:text-[#0b1c3c] transition en">Education & Personal Info</a>
-                        <!-- 中文增加 tracking-widest -->
                         <a href="#education" class="hover:text-[#0b1c3c] transition zh tracking-widest">教育背景和个人信息</a>
                         <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
-                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs">
+                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
                                 <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">Personal Information</a><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">基本信息概览</a></li>
                                 <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">King's College London</a><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">英国伦敦国王学院</a></li>
                                 <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">ECUPL</a><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">华东政法大学</a></li>
@@ -145,7 +144,7 @@
                         <a href="#experience" class="hover:text-[#0b1c3c] transition en">Legal Experience</a>
                         <a href="#experience" class="hover:text-[#0b1c3c] transition zh tracking-widest">实习经历</a>
                         <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
-                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs">
+                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
                                 <li><a href="#exp-tiktok" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">TikTok</a></li>
                                 <li><a href="#exp-freshfields" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">Freshfields Bruckhaus Deringer</a><a href="#exp-freshfields" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">富而德律师事务所</a></li>
                                 <li><a href="#exp-jinmao" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">JIN MAO Partners</a><a href="#exp-jinmao" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">金茂律师事务所</a></li>
@@ -160,7 +159,7 @@
                         <a href="#campus" class="hover:text-[#0b1c3c] transition en">Campus Experience</a>
                         <a href="#campus" class="hover:text-[#0b1c3c] transition zh tracking-widest">校园经历</a>
                         <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
-                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs">
+                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
                                 <li><a href="#campus" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">Legal Aid Center, ECUPL</a><a href="#campus" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">华政大学生社会法律援助中心</a></li>
                             </ul>
                         </div>
@@ -171,7 +170,7 @@
                         <a href="#practical" class="hover:text-[#0b1c3c] transition en">Practical Experience & Honors</a>
                         <a href="#practical" class="hover:text-[#0b1c3c] transition zh tracking-widest">实践经历和获奖情况</a>
                         <div class="dropdown-menu absolute top-full right-0 mt-2 w-64 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
-                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs">
+                            <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
                                 <li><a href="#practical" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">Public Interest Litigation Competition</a><a href="#practical" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">“小城杯”公益诉讼之星大赛</a></li>
                                 <li><a href="#skills" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition en">Legal Skills & Languages</a><a href="#skills" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition zh tracking-wider">专业技能与语言能力</a></li>
                             </ul>
@@ -180,8 +179,8 @@
                 </ul>
             </div>
 
-            <!-- 右侧区域：中英双语切换 (占位并靠右) -->
-            <div class="lg:w-1/4 flex justify-end shrink-0">
+            <!-- 右侧区域：自然占位，绝不被挤出 -->
+            <div class="shrink-0">
                 <button onclick="toggleLang()" class="text-xs font-semibold bg-[#0b1c3c] text-white px-4 py-2 rounded-full hover:bg-gray-800 transition shadow-lg">
                     中文 / EN
                 </button>
