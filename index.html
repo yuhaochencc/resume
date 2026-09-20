@@ -13,7 +13,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             color: #1d1d1f;
             overflow-x: hidden;
-            background-color: #f0f2f5; /* 基础底色 */
+            background-color: #f0f2f5; 
         }
 
         /* 动态高级拼色背景 (液态光影效果) */
@@ -100,10 +100,13 @@
 
     <!-- 顶部横置导航栏 -->
     <nav class="fixed top-4 left-0 right-0 z-50 px-6">
-        <div class="max-w-6xl mx-auto glass-panel rounded-full px-6 py-3 flex justify-between items-center">
-            <div class="font-bold text-xl tracking-tighter text-jpm cursor-pointer">YC.</div>
+        <div class="max-w-6xl mx-auto glass-panel rounded-full px-6 py-2 flex justify-between items-center">
+            <!-- Logo 替换为图片附件 -->
+            <div class="cursor-pointer">
+                <img src="40b39cfee0f7e44dc2ff937b0f148ef.png" alt="YC Logo" class="h-10 w-auto object-contain">
+            </div>
             
-            <!-- 桌面端横向菜单 -->
+            <!-- 桌面端横向菜单 (移动端隐藏，避免误触和折行) -->
             <ul class="hidden md:flex space-x-8 text-sm font-semibold text-gray-700">
                 
                 <!-- 1. 教育背景和个人信息 -->
@@ -158,7 +161,7 @@
                 </li>
             </ul>
 
-            <button onclick="toggleLang()" class="text-xs font-semibold bg-[#0b1c3c] text-white px-4 py-2 rounded-full hover:bg-gray-800 transition shadow-lg">
+            <button onclick="toggleLang()" class="text-xs font-semibold bg-[#0b1c3c] text-white px-4 py-2 rounded-full hover:bg-gray-800 transition shadow-lg shrink-0">
                 中文 / EN
             </button>
         </div>
@@ -180,13 +183,28 @@
                     <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-gray-900 en">YUHAO CHEN</h1>
                     <h1 class="text-5xl font-extrabold tracking-tight mb-4 text-gray-900 zh">陈宇浩</h1>
                     
-                    <div class="text-gray-600 space-y-2 mb-8 en">
+                    <div class="text-gray-800 space-y-2 mb-6 en">
                         <p>London, U.K. | +44 7350126921</p>
                         <p>Email: yuhaochen.cc@gmail.com</p>
                     </div>
-                    <div class="text-gray-600 space-y-2 mb-8 zh">
+                    <!-- 新增：高亮一键下载 PDF 按钮 (英文) -->
+                    <div class="mb-8 en">
+                        <a href="陈宇浩 华政+KCL 中英文简历 13817701142.pdf" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-[#0b1c3c] rounded-full shadow-lg hover:bg-gray-800 hover:-translate-y-1 hover:shadow-xl">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Download CV (PDF)
+                        </a>
+                    </div>
+
+                    <div class="text-gray-800 space-y-2 mb-6 zh">
                         <p>上海市浦东新区 | 电话: 13817701142 | 邮箱: yuhaochen.cc@gmail.com</p>
                         <p>政治面貌: 群众 | 民族: 汉族</p>
+                    </div>
+                    <!-- 新增：高亮一键下载 PDF 按钮 (中文) -->
+                    <div class="mb-8 zh">
+                        <a href="陈宇浩 华政+KCL 中英文简历 13817701142.pdf" target="_blank" class="inline-flex items-center justify-center px-5 py-2.5 text-sm font-bold text-white transition-all bg-[#0b1c3c] rounded-full shadow-lg hover:bg-gray-800 hover:-translate-y-1 hover:shadow-xl">
+                            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            下载简历 (PDF)
+                        </a>
                     </div>
 
                     <div class="space-y-6">
@@ -195,18 +213,18 @@
                             <h3 class="text-lg font-bold text-gray-900 zh">英国伦敦国王学院</h3>
                             <p class="text-jpm text-sm font-medium mt-1 en">Master of Laws (LL.M.) - Specialization: International Dispute Resolution</p>
                             <p class="text-jpm text-sm font-medium mt-1 zh">法学硕士 (国际争议解决)</p>
-                            <div class="text-gray-500 text-xs mt-1 en">Sep 2025 – Sep 2026</div>
-                            <div class="text-gray-500 text-xs mt-1 zh">2025.09 – 2026.09</div>
+                            <div class="text-gray-600 text-xs mt-1 en">Sep 2025 – Sep 2026</div>
+                            <div class="text-gray-600 text-xs mt-1 zh">2025.09 – 2026.09</div>
                         </div>
                         <div class="border-l-2 border-[#0b1c3c]/20 pl-4">
                             <h3 class="text-lg font-bold text-gray-900 en">East China University of Political Science and Law (ECUPL)</h3>
                             <h3 class="text-lg font-bold text-gray-900 zh">华东政法大学</h3>
                             <p class="text-jpm text-sm font-medium mt-1 en">Bachelor of Laws (LL.B.) - Specialization: Economic Law</p>
                             <p class="text-jpm text-sm font-medium mt-1 zh">法学专业（经济法）</p>
-                            <p class="text-gray-600 text-sm mt-1 en">GPA: 3.76/4.0 (90.5/100)</p>
-                            <p class="text-gray-600 text-sm mt-1 zh">GPA: 3.75 (90.5) | 已通过国家职业法律资格考试</p>
-                            <div class="text-gray-500 text-xs mt-1 en">Sep 2022 - Jul 2026</div>
-                            <div class="text-gray-500 text-xs mt-1 zh">2022.09 – 2026.07</div>
+                            <p class="text-gray-800 text-sm mt-1 en">GPA: 3.76/4.0 (90.5/100)</p>
+                            <p class="text-gray-800 text-sm mt-1 zh">GPA: 3.75 (90.5) | 已通过国家职业法律资格考试</p>
+                            <div class="text-gray-600 text-xs mt-1 en">Sep 2022 - Jul 2026</div>
+                            <div class="text-gray-600 text-xs mt-1 zh">2022.09 – 2026.07</div>
                         </div>
                     </div>
                 </div>
@@ -236,15 +254,15 @@
                         <h3 class="text-xl font-bold text-gray-900">英国TikTok信息技术有限公司 | 伦敦</h3>
                         <p class="text-jpm font-medium mt-1">政策合规治理团队</p>
                     </div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 en">Jun 2026 - Present</div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 zh">2026.06 - 至今</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 en">Jun 2026 - Present</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 zh">2026.06 - 至今</div>
                 </div>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm en">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm en">
                     <li>Drafted and updated TikTok Shop governance policies by translating EU GPSR requirements into platform rules across 8 key European markets.</li>
                     <li>Conducted legal and policy analysis to identify compliance risks and refine product governance policies.</li>
                     <li>Supported the development of internal LLM governance tools through model training, distillation and calibration, enhancing automated compliance risk identification.</li>
                 </ul>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm zh">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm zh">
                     <li>独立对接荷兰、德国等地团队，跨部门沟通并全程参与欧盟核心八国市场的平台合规政策的系统性构建</li>
                     <li>负责掌控TikTok Shop (UK)合规政策的具体实施，根据实时政策及类案，准确识别法律风险并更新平台规则</li>
                     <li>主导TikTok内部大语言模型的建设、培养蒸馏与校准，推动风险识别流程及处置自动化</li>
@@ -262,15 +280,15 @@
                         <h3 class="text-xl font-bold text-gray-900">英国富而德律师事务所上海代表处</h3>
                         <p class="text-jpm font-medium mt-1">资本市场团队</p>
                     </div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 en">Mar 2025 - Jul 2025</div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 zh">2025.03 - 2025.07</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 en">Mar 2025 - Jul 2025</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 zh">2025.03 - 2025.07</div>
                 </div>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm en">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm en">
                     <li>Independently coordinated with top-tier underwriters (CICC, UBS) and clients throughout the full-cycle due diligence and verification for high-profile HKEx IPOs, including Hesai Tech., AUX and MiniMax.</li>
                     <li>Drafted and reviewed key sections of prospectuses for major clients like Flyme and CATL, demonstrating a deep understanding of prospectus structure and purpose for both Hong Kong and U.S. markets.</li>
                     <li>Managed and drafted 30+ regulatory filings (e.g., M106, FF004) and handled project Guidecheck and Bible production with zero-error precision under tight deadlines.</li>
                 </ul>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm zh">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm zh">
                     <li>独立完成禾赛科技、大族数控、蜜雪冰城、MiniMax等企业港股IPO的三方尽调、材料验证全过程</li>
                     <li>负责参与Flyme、视源电子、奥克斯电器等行业知名头部企业招股书的业务、财务部分撰写</li>
                     <li>独立异地对接客户企业及CICC、UBS等其他中介机构，并多次获保荐人高度评价</li>
@@ -290,15 +308,15 @@
                         <h3 class="text-xl font-bold text-gray-900">上海市金茂律师事务所</h3>
                         <p class="text-jpm font-medium mt-1">投融资并购团队</p>
                     </div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 en">Jan 2025 - Mar 2025</div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 zh">2025.01 - 2025.03</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 en">Jan 2025 - Mar 2025</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 zh">2025.01 - 2025.03</div>
                 </div>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm en">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm en">
                     <li>Identified and mitigated critical legal risks for state-owned enterprise land acquisitions and cross-border M&A by delivering 4+ meticulous due diligence reports, ensuring seamless project progression.</li>
                     <li>Drafted and refined a wide range of investment agreements and subsidiary setup documents, aligning legal frameworks with complex commercial objectives.</li>
                     <li>Facilitated high-stakes client negotiations by providing real-time legal risk alerts, incorporating a commercial mindset into legal solutions.</li>
                 </ul>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm zh">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm zh">
                     <li>独立完成4份尽调报告及相关网核内容，确保内容严谨准确，防范尽调失职风险并有效推进项目进展</li>
                     <li>全过程参与多项国企土地收购、新设子公司及并购项目、私募基金投融资项目，承担合作协议起草与审核、合规尽调及法律风险提示工作</li>
                     <li>深度推进上海东方枢纽工程进程中的系列法律问题</li>
@@ -316,15 +334,15 @@
                         <h3 class="text-xl font-bold text-gray-900">上海市海华永泰律师事务所</h3>
                         <p class="text-jpm font-medium mt-1">知识产权团队</p>
                     </div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 en">Jun 2024 - Aug 2024</div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 zh">2024.06 - 2024.08</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 en">Jun 2024 - Aug 2024</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 zh">2024.06 - 2024.08</div>
                 </div>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm en">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm en">
                     <li>Contributed to a landmark service trademark infringement case for Universal Pictures (Minions, Jurassic World, Kung Fu Panda) which was selected as one of the Top 10 Cases by the Supreme People's Court of China.</li>
                     <li>Secured digital evidence using timestamp and blockchain technology to provide critical support for litigation.</li>
                     <li>Authored 20+ litigation documents including case retrieval reports, defense opinions, and case analysis reports, which were adopted by senior lawyers.</li>
                 </ul>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm zh">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm zh">
                     <li>参与环球影画公司对系列商标侵权诉讼全过程，负责小黄人、功夫熊猫等IP的维权，通过多元法律手段解决超过三十余起各类侵权案件。其中所参与的一起服务商标案件入选最高人民法院十大案例</li>
                     <li>独立撰写超20份关于著作权、商标侵权及其他民商事纠纷诉讼案件的律师函、质证意见、反驳意见等</li>
                     <li>负责团队案件的商标查询，电子证据固定，时间戳制作等，为后续诉讼质证环节提供有力保障</li>
@@ -343,14 +361,14 @@
                         <h3 class="text-xl font-bold text-gray-900">上海市第一中级人民法院</h3>
                         <p class="text-jpm font-medium mt-1">刑事审判庭实习生</p>
                     </div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 en">Jun 2023 - Sep 2023</div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 zh">2023.06 - 2023.09</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 en">Jun 2023 - Sep 2023</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 zh">2023.06 - 2023.09</div>
                 </div>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm en">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm en">
                     <li>Organized and analyzed over 100 case files, focusing on insider trading, market manipulation, and corruption.</li>
                     <li>Prepared court briefs, summarized key arguments, and reviewed audio/visual evidence, visualized key disputes via data-driven charts.</li>
                 </ul>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm zh">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm zh">
                     <li>审查音视频证据、检索案例百余件，涉及内幕交易、操纵市场等，旁听开庭，归纳争议焦点并撰写审判要旨</li>
                 </ul>
             </div>
@@ -375,17 +393,27 @@
                         <h3 class="text-xl font-bold text-gray-900">华东政法大学大学生社会法律援助中心</h3>
                         <p class="text-jpm font-medium mt-1">普法宣传部成员 / 家事纠纷组成员</p>
                     </div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 en">Oct 2022 - May 2025</div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 zh">2022.10 - 2025.05</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 en">Oct 2022 - May 2025</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 zh">2022.10 - 2025.05</div>
                 </div>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm en">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm en">
                     <li>Consulted on 20+ inheritance cases with a success rate over 92%, and provided multiple formal legal opinions.</li>
                     <li>Participated in 10+ community legal outreach events regarding family and inheritance law and maintained in-depth communication with senior lawyers.</li>
-                    <li>Organized the "Labor Disputes" campaign, involving face-to-face sessions with 30+ employers; coordinated joint activities with SJTU School of Law.</li>
+                    <!-- 带推文徽章的英文经历 -->
+                    <li>Organized the "Labor Disputes" campaign, involving face-to-face sessions with 30+ employers; coordinated joint activities with SJTU School of Law. 
+                        <a href="https://mp.weixin.qq.com/s/ouatvr5Q6ul10Y-oSlkffA" target="_blank" class="inline-flex items-center gap-1 px-2 py-0.5 ml-1 text-[11px] font-semibold transition-all bg-white/40 border border-[#0b1c3c]/20 rounded-md text-[#0b1c3c] hover:bg-[#0b1c3c] hover:text-white hover:shadow-md">
+                            Read Post ↗
+                        </a>
+                    </li>
                 </ul>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm zh">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm zh">
                     <li>深度参与普法活动，如华政×交大凯源法学院联合活动，先后负责策划、授课、政府沟通等工作</li>
-                    <li>负责“疫情下的劳资纠纷问题”普法活动，与30余家用人单位面对面，获“华政法援”报道</li>
+                    <!-- 带推文徽章的中文经历 -->
+                    <li>负责“疫情下的劳资纠纷问题”普法活动，与30余家用人单位面对面，获“华政法援”报道
+                        <a href="https://mp.weixin.qq.com/s/ouatvr5Q6ul10Y-oSlkffA" target="_blank" class="inline-flex items-center gap-1 px-2 py-0.5 ml-1 text-[11px] font-semibold transition-all bg-white/40 border border-[#0b1c3c]/20 rounded-md text-[#0b1c3c] hover:bg-[#0b1c3c] hover:text-white hover:shadow-md">
+                            阅读推文 ↗
+                        </a>
+                    </li>
                     <li>承办婚姻家事、财产继承案件咨询20余起，提供法律意见书数份，案件跟进成功率超90%</li>
                     <li>十余次应社区邀请，深入各街镇参与婚继问题普法活动，并就相关法律问题与资深律师深度交流沟通</li>
                 </ul>
@@ -411,26 +439,36 @@
                         <h3 class="text-xl font-bold text-gray-900">“小城杯”公益诉讼之星大赛</h3>
                         <p class="text-jpm font-medium mt-1">三等奖</p>
                     </div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 en">Nov 2024</div>
-                    <div class="text-gray-500 font-medium md:text-right mt-2 md:mt-0 zh">2024.11</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 en">Nov 2024</div>
+                    <div class="text-gray-600 font-medium md:text-right mt-2 md:mt-0 zh">2024.11</div>
                 </div>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm en">
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm en">
                     <li>Led a team to litigate against Luckin Coffee for infringing on consumer rights, resulting in a judicial opinion that led to policy changes at the company.</li>
-                    <li>Gained media recognition from outlets including China Legal Daily and Shanghai Youth Daily.</li>
+                    <!-- 带推文徽章的英文经历 -->
+                    <li>Gained media recognition from outlets including China Legal Daily and Shanghai Youth Daily.[cite: 1]
+                        <a href="https://mp.weixin.qq.com/s/9_U2i5njCWNWDl2eMFYZoQ" target="_blank" class="inline-flex items-center gap-1 px-2 py-0.5 ml-1 text-[11px] font-semibold transition-all bg-white/40 border border-[#0b1c3c]/20 rounded-md text-[#0b1c3c] hover:bg-[#0b1c3c] hover:text-white hover:shadow-md">
+                            Media Coverage ↗
+                        </a>
+                    </li>
                 </ul>
-                <ul class="list-disc pl-5 text-gray-700 space-y-2 text-sm zh">
-                    <li>诉瑞幸咖啡强制“线上消费”侵害消费者自主选择权和个人信息权益，得到评委律师们的高度肯定，并获《上海法治报》、松江新闻广播等媒体报道，最终获三等奖</li>
+                <ul class="list-disc pl-5 text-gray-800 space-y-2 text-sm zh">
+                    <!-- 带推文徽章的中文经历 -->
+                    <li>诉瑞幸咖啡强制“线上消费”侵害消费者自主选择权和个人信息权益，得到评委律师们的高度肯定，并获《上海法治报》、松江新闻广播等媒体报道，最终获三等奖[cite: 1]
+                        <a href="https://mp.weixin.qq.com/s/9_U2i5njCWNWDl2eMFYZoQ" target="_blank" class="inline-flex items-center gap-1 px-2 py-0.5 ml-1 text-[11px] font-semibold transition-all bg-white/40 border border-[#0b1c3c]/20 rounded-md text-[#0b1c3c] hover:bg-[#0b1c3c] hover:text-white hover:shadow-md">
+                            媒体报道 ↗
+                        </a>
+                    </li>
                     <li>长宁区法院主持多轮诉前调解后出具司法意见书，同时要求瑞幸咖啡严查个人隐私政策、增设线下价目表等。使该项目初步达成了诉讼目的，实现公益价值</li>
                 </ul>
             </div>
 
             <div id="skills" class="glass-card p-8">
-                <div class="en text-gray-700 space-y-4">
+                <div class="en text-gray-800 space-y-4">
                     <p><strong class="text-gray-900">Legal Skills:</strong> Legal Research, Document Drafting, Visio (Flowcharts), Policy Analysis, Risk Assessment</p>
                     <p><strong class="text-gray-900">Languages:</strong> English (Fluent, IELTS 7.5 (L9.0, R7.5, W6.5, S6.5)), Mandarin (Native)</p>
                     <p><strong class="text-gray-900">Honors:</strong> Outstanding Student Leader, Social Activities Scholarship, Third-class Scholarship</p>
                 </div>
-                <div class="zh text-gray-700 space-y-4">
+                <div class="zh text-gray-800 space-y-4">
                     <p><strong class="text-gray-900">法律技能：</strong> 类案检索（威科先行/ West Law）、证据固定（时间戳/区块链存证）、诉讼文书撰写</p>
                     <p><strong class="text-gray-900">语言能力：</strong> 英语（CET-6 555，雅思7.5）、法律英语（可熟练处理英文合同）</p>
                     <p><strong class="text-gray-900">技术工具：</strong> Office（Excel数据透视表）、Vision流程图、Meta Law检索</p>
@@ -443,8 +481,8 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // 初始化浮现动画
-        AOS.init({ duration: 800, easing: 'ease-out-cubic', once: true, offset: 30 });
+        // 动画速度提升至400ms，更加干脆利落
+        AOS.init({ duration: 400, easing: 'ease-out', once: true, offset: 0 });
 
         // 中英双语切换逻辑
         let isEnglish = true;
@@ -452,8 +490,14 @@
         function toggleLang() {
             isEnglish = !isEnglish;
             document.querySelectorAll('.en').forEach(el => el.style.display = isEnglish ? 'block' : 'none');
+            // 注意：针对flex容器，如果原来是 flex 的元素不能简单置为 block，但本代码中带有 en/zh 标签的大多是块级元素或 inline-flex
+            // 为了完美兼容，可以直接修改 className 的隐藏逻辑，但目前的 style.display 设置对于绝大多数常规展示已经足够
             document.querySelectorAll('.zh').forEach(el => el.style.display = isEnglish ? 'none' : 'block');
             
+            // 修复：对于内联Flex下载按钮，切换时强制其恢复flex布局
+            document.querySelectorAll('a.inline-flex.en').forEach(el => el.style.display = isEnglish ? 'inline-flex' : 'none');
+            document.querySelectorAll('a.inline-flex.zh').forEach(el => el.style.display = isEnglish ? 'none' : 'inline-flex');
+
             // 延迟刷新动画锚点
             setTimeout(() => { AOS.refresh(); }, 100);
         }
