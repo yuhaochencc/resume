@@ -92,10 +92,51 @@
 
         .text-jpm { color: #0b1c3c; }
         *[id] { scroll-margin-top: 140px; }
+        /* 引入优雅的英文手写体 */
+        @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+        .font-handwriting { font-family: 'Great Vibes', cursive; }
+
+        /* 进场动画：波点扩散 */
+        .intro-bg-expand {
+            animation: circleExpand 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+        }
+        @keyframes circleExpand {
+            0% { transform: scale(0); opacity: 0; }
+            5% { opacity: 1; }
+            100% { transform: scale(300); opacity: 1; } /* 放大300倍以覆盖任何分辨率的屏幕 */
+        }
+
+        /* 进场动画：文字苹果式渐显渐隐 */
+        .intro-text-fade {
+            animation: textFade 2.2s ease-in-out forwards;
+        }
+        @keyframes textFade {
+            0% { opacity: 0; filter: blur(8px); transform: scale(0.95); }
+            25% { opacity: 1; filter: blur(0px); transform: scale(1); }
+            75% { opacity: 1; filter: blur(0px); transform: scale(1); }
+            100% { opacity: 0; filter: blur(4px); transform: scale(1.05); }
+        }
+
+        /* 进场动画：整体幕布淡出 */
+        .intro-fade-out {
+            animation: screenOut 0.8s ease-in-out forwards;
+        }
+        @keyframes screenOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; visibility: hidden; }
+        }
     </style>
 </head>
 <body class="antialiased leading-relaxed">
-
+<!-- ==================== 苹果风进场动画 ==================== -->
+    <div id="intro-overlay" class="fixed inset-0 z-[9999] flex items-center justify-center bg-transparent">
+        <!-- 初始的深蓝色波点，它将扩散成全屏背景 -->
+        <div id="intro-dot" class="absolute w-10 h-10 bg-[#0b1c3c] rounded-full scale-0"></div>
+        <!-- 手写体 Welcome -->
+        <div id="intro-welcome" class="relative z-10 opacity-0 text-white text-6xl md:text-8xl font-handwriting tracking-wider">
+            Welcome
+        </div>
+    </div>
     <div class="ambient-bg">
         <div class="ambient-blob-1"></div>
         <div class="ambient-blob-2"></div>
@@ -675,6 +716,32 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        // 开机进场动画逻辑
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            const introOverlay = document.getElementById('intro-overlay');
+            const introDot = document.getElementById('intro-dot');
+            const introWelcome = document.getElementById('intro-welcome');
+
+            // 1. 动画期间锁定页面滚动
+            body.style.overflow = 'hidden';
+
+            // 2. 延迟 200ms 后触发波点扩散，给人眼一个适应时间
+            setTimeout(() => {
+                introDot.classList.add('intro-bg-expand');
+            }, 200);
+
+            // 3. 背景填满后 (800ms)，文字开始浮现
+            setTimeout(() => {
+                introWelcome.classList.add('intro-text-fade');
+            }, 800);
+
+            // 4. 文字动画结束 (800 + 2200 = 3000ms) 后，撤掉深蓝色幕布并恢复网页滚动
+            setTimeout(() => {
+                introOverlay.classList.add('intro-fade-out');
+                body.style.overflow = '';
+            }, 3000); 
+        });
         AOS.init({ duration: 400, easing: 'ease-out', once: true, offset: 0 });
 
         // 终极双语切换方案：控制整体容器显示
