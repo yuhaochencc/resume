@@ -159,65 +159,45 @@
                 </ul>
             </div>
 
-<!-- 中间：统一的导航菜单 (通过 span 区分中英文字符，保证所有锚点永久有效) -->
-            <div class="hidden lg:flex flex-1 justify-center overflow-visible px-2">
+            <!-- 中间：导航菜单 (中文版，默认隐藏) -->
+            <div id="nav-zh" class="hidden lg:flex flex-1 justify-center overflow-visible px-2" style="display: none;">
                 <ul class="flex space-x-6 text-[13px] xl:text-sm font-semibold text-gray-700 whitespace-nowrap">
-                    
-                    <!-- 1. 教育背景和个人信息 -->
                     <li class="nav-item relative py-2 cursor-pointer">
-                        <a href="#education" class="hover:text-[#0b1c3c] transition">
-                            <span class="lang-en">Education & Personal Info</span>
-                            <span class="lang-zh tracking-widest">教育背景和个人信息</span>
-                        </a>
+                        <a href="#education" class="hover:text-[#0b1c3c] transition tracking-widest">教育背景和个人信息</a>
                         <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
                             <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
-                                <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">Personal Information</span><span class="lang-zh tracking-wider">基本信息概览</span></a></li>
-                                <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">King's College London</span><span class="lang-zh tracking-wider">英国伦敦国王学院</span></a></li>
-                                <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">ECUPL</span><span class="lang-zh tracking-wider">华东政法大学</span></a></li>
+                                <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">基本信息概览</a></li>
+                                <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">英国伦敦国王学院</a></li>
+                                <li><a href="#education" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">华东政法大学</a></li>
                             </ul>
                         </div>
                     </li>
-
-                    <!-- 2. 实习经历 -->
                     <li class="nav-item relative py-2 cursor-pointer">
-                        <a href="#experience" class="hover:text-[#0b1c3c] transition">
-                            <span class="lang-en">Legal Experience</span>
-                            <span class="lang-zh tracking-widest">实习经历</span>
-                        </a>
+                        <a href="#experience" class="hover:text-[#0b1c3c] transition tracking-widest">实习经历</a>
                         <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
                             <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
-                                <li><a href="#exp-tiktok" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition">TikTok</a></li>
-                                <li><a href="#exp-freshfields" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">Freshfields Bruckhaus Deringer</span><span class="lang-zh tracking-wider">富而德律师事务所</span></a></li>
-                                <li><a href="#exp-jinmao" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">JIN MAO Partners</span><span class="lang-zh tracking-wider">金茂律师事务所</span></a></li>
-                                <li><a href="#exp-hiways" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">Hiways Law Firm</span><span class="lang-zh tracking-wider">海华永泰律师事务所</span></a></li>
-                                <li><a href="#exp-court" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">First Intermediate People's Court</span><span class="lang-zh tracking-wider">上海第一中级人民法院</span></a></li>
+                                <li><a href="#exp-tiktok" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">TikTok</a></li>
+                                <li><a href="#exp-freshfields" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">富而德律师事务所</a></li>
+                                <li><a href="#exp-jinmao" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">金茂律师事务所</a></li>
+                                <li><a href="#exp-hiways" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">海华永泰律师事务所</a></li>
+                                <li><a href="#exp-court" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">上海第一中级人民法院</a></li>
                             </ul>
                         </div>
                     </li>
-
-                    <!-- 3. 校园经历 -->
                     <li class="nav-item relative py-2 cursor-pointer">
-                        <a href="#campus" class="hover:text-[#0b1c3c] transition">
-                            <span class="lang-en">Campus Experience</span>
-                            <span class="lang-zh tracking-widest">校园经历</span>
-                        </a>
+                        <a href="#campus" class="hover:text-[#0b1c3c] transition tracking-widest">校园经历</a>
                         <div class="dropdown-menu absolute top-full left-1/2 -translate-x-1/2 mt-2 w-56 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
                             <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
-                                <li><a href="#campus" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">Legal Aid Center, ECUPL</span><span class="lang-zh tracking-wider">华政大学生社会法律援助中心</span></a></li>
+                                <li><a href="#campus" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">华政大学生社会法律援助中心</a></li>
                             </ul>
                         </div>
                     </li>
-
-                    <!-- 4. 实践经历和获奖情况 -->
                     <li class="nav-item relative py-2 cursor-pointer">
-                        <a href="#practical" class="hover:text-[#0b1c3c] transition">
-                            <span class="lang-en">Practical Experience & Honors</span>
-                            <span class="lang-zh tracking-widest">实践经历和获奖情况</span>
-                        </a>
+                        <a href="#practical" class="hover:text-[#0b1c3c] transition tracking-widest">实践经历和获奖情况</a>
                         <div class="dropdown-menu absolute top-full right-0 mt-2 w-64 glass-panel rounded-xl p-2 shadow-xl border border-white/60">
                             <ul class="flex flex-col space-y-1 text-gray-600 text-xs whitespace-normal">
-                                <li><a href="#practical" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">Public Interest Litigation Competition</span><span class="lang-zh tracking-wider">“小城杯”公益诉讼之星大赛</span></a></li>
-                                <li><a href="#skills" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition"><span class="lang-en">Legal Skills & Languages</span><span class="lang-zh tracking-wider">专业技能与语言能力</span></a></li>
+                                <li><a href="#practical" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">“小城杯”公益诉讼之星大赛</a></li>
+                                <li><a href="#skills" class="block px-3 py-2 hover:bg-white/60 rounded-lg transition tracking-wider">专业技能与语言能力</a></li>
                             </ul>
                         </div>
                     </li>
